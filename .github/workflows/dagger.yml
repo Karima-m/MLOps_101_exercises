@@ -28,3 +28,11 @@ jobs:
           verb: run
           args: go run pipeline.go
           version: "0.19.6"
+
+      # Additional code that makes and artifacts folder
+      - name: Upload output folder
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: pipeline-output
+          path: go/output
