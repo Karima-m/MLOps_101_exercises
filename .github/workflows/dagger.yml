@@ -29,7 +29,7 @@ jobs:
           args: go run pipeline.go
           version: "0.19.6"
 
-      # Additional code that makes and artifacts folder
+      # Artifacts folder with output
       - name: Upload output folder
         if: success()
         uses: actions/upload-artifact@v4
