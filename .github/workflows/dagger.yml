@@ -32,7 +32,7 @@ jobs:
       # Additional code that makes and artifacts folder
       - name: Upload output folder
         if: success()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pipeline-output
           path: go/output
